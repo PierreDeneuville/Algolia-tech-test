@@ -9,14 +9,24 @@ require 'json'
 require 'open-uri'
 
 puts "cleaning movie base"
-Movie.destroy_all
+Movie.delete_all
 
 puts "importing movies from Algolia JSON"
 
-url = "https://gist.github.com/alexandremeunier/49533eebe2ec93b14d32b2333272f9f8"
+url = "https://gist.githubusercontent.com/alexandremeunier/49533eebe2ec93b14d32b2333272f9f8/raw/924d89e2236ca6fa2ade7481c91bfbf858c49531/movies.json"
 movies_list = URI.open(url).read
 movies = JSON.parse(movies_list)
 
-movies.first(5).each do |movie|
+puts "creating 5 first movies duuude"
+movies.each do |movie|
+  Movie.create(
+    title: movie['title'],
+    year: movie['year'].to_i,
+    actors: movie['actors'].first(3),
+    genre: movie['genre'].first(2),
+    rating: movie['rating'],
+    score: movie['score'],
+    image: movie['image']
+  )
   puts movie
 end
