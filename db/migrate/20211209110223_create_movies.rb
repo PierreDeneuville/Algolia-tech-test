@@ -5,7 +5,7 @@ class CreateMovies < ActiveRecord::Migration[6.0]
       t.integer :year
       t.text :image
       t.text :actors, array: true, default: []
-      t.string :genre
+      t.text :genre, array: true, default: []
       t.decimal :rating
       t.decimal :score
 

@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(version: 2021_12_09_110223) do
     t.integer "year"
     t.text "image"
     t.text "actors", default: [], array: true
-    t.string "genre"
+    t.text "genre", default: [], array: true
     t.decimal "rating"
     t.decimal "score"
     t.datetime "created_at", precision: 6, null: false
