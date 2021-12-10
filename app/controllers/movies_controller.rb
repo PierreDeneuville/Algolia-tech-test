@@ -1,5 +1,4 @@
 class MoviesController < ApplicationController
-
   def index
     @movies = Movie.all
   end
@@ -9,5 +8,4 @@ class MoviesController < ApplicationController
     @movie.destroy
     redirect_to movies_path
   end
-
 end
