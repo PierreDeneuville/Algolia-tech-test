@@ -22,6 +22,7 @@
 
 .movie-picture {
   width: 5%;
+  margin: 10px;
 }
 .movie-picture > img {
   height: 100px;
@@ -31,6 +32,31 @@
 .btn {
   background-color: aquamarine;
 }
+
+
+.movie-infos {
+  width: 80%;
+  padding: 20px;
+}
+
+.movie-actions {
+  width: 15%;
+  padding: 20px;
+}
+
+.star-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.delete-box {
+  margin: 20px 0px;
+}
+
+.delete-icon {
+  width: 20px;
+}
+
 
 
 .card-movie .card-movie-infos {

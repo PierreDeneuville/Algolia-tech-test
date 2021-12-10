@@ -24,12 +24,18 @@
         <%= gen %>
       </div>
     <% end %>
-
   </div>
 
-  <div>
-    <%= movie.rating %>
+  <div class="movie-actions" >
+    <div class="rating">
+      <%= movie.rating %>
+      <%= image_tag 'star.png', class: "star-icon" %>
+    </div>
+    <div class="delete-box">
+      <%= image_tag 'delete.png', class: "delete-icon" %>
+    </div>
   </div>
+
 </div>
 
 <% end %>
