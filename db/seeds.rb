@@ -17,7 +17,7 @@ url = "https://gist.githubusercontent.com/alexandremeunier/49533eebe2ec93b14d32b
 movies_list = URI.open(url).read
 movies = JSON.parse(movies_list)
 
-puts "creating 5 first movies duuude"
+puts "Generating over 5k movies duuude"
 movies.each do |movie|
   Movie.create(
     title: movie['title'],
